@@ -96,6 +96,10 @@ After game over:
 
 ## Setup & Run
 
+You can directly run the game by opening the .exe file already included in the repository — no setup required.
+
+However, if you’d like to build it from scratch, follow these steps:
+
 1. Install MASM and download the `Irvine32` library from its official source.
 2. Place `Irvine32.inc` and `Irvine32.lib` in your project path or MASM include/lib directories.
 3. Assemble and link using:
