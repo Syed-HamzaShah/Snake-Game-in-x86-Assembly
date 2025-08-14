@@ -4,10 +4,8 @@ A classic Snake game implemented in x86 Assembly Language using MASM and the **I
 
 > ⚠ **Note on Irvine32 Library**  
 > This project depends on the `Irvine32` library, which is **not included in this repository** due to licensing and distribution restrictions.  
-> You must obtain it from the official source provided by Kip Irvine (usually bundled with the *Assembly Language for x86 Processors* textbook or downloadable from his official course resources).  
+> You must obtain it from the official source provided by Kip Irvine (usually bundled with the _Assembly Language for x86 Processors_ textbook or downloadable from his official course resources).  
 > See [Requirements](#requirements) for details.
-
-Built with love and registers.
 
 ---
 
@@ -38,6 +36,7 @@ Therefore, this repository contains only my original source code and compiled fi
 ## How It Works
 
 This game uses:
+
 - `.386` Flat memory model
 - BIOS text-mode functions
 - **Irvine32 library** for:
@@ -52,42 +51,44 @@ This game uses:
 
 ## Controls
 
-| Key | Action        |
-|-----|---------------|
-| `W` | Move Up       |
-| `A` | Move Left     |
-| `S` | Move Down     |
-| `D` | Move Right    |
-| `X` | Exit Game     |
+| Key | Action     |
+| --- | ---------- |
+| `W` | Move Up    |
+| `A` | Move Left  |
+| `S` | Move Down  |
+| `D` | Move Right |
+| `X` | Exit Game  |
 
 At the start, you're prompted:
+
 > `Do you want to play the game? 1 = Yes, 2 = No`
 
 After game over:
+
 > `Try Again? 1 = yes, 0 = no`
 
 ---
 
 ## File Structure
 
-| File/Section | Description |
-|--------------|-------------|
-| `.data`      | Stores messages, snake and coin data, position arrays, score variables |
-| `main PROC`  | Main game loop, input handling, collision logic |
-| `DrawWall`   | Renders the border walls of the game area |
-| `DrawScoreboard` | Initializes the score display |
-| `DrawPlayer`, `DrawBody` | Renders the snake head and body |
-| `EatingCoin` | Updates score and grows the snake |
-| `CheckSnake` | Detects self-collision |
-| `CreateRandomCoin` | Places coins in random positions, avoiding snake |
-| `PromptScreen`, `YouDied`, `ReinitializeGame` | UI/UX logic and game state resets |
+| File/Section                                  | Description                                                            |
+| --------------------------------------------- | ---------------------------------------------------------------------- |
+| `.data`                                       | Stores messages, snake and coin data, position arrays, score variables |
+| `main PROC`                                   | Main game loop, input handling, collision logic                        |
+| `DrawWall`                                    | Renders the border walls of the game area                              |
+| `DrawScoreboard`                              | Initializes the score display                                          |
+| `DrawPlayer`, `DrawBody`                      | Renders the snake head and body                                        |
+| `EatingCoin`                                  | Updates score and grows the snake                                      |
+| `CheckSnake`                                  | Detects self-collision                                                 |
+| `CreateRandomCoin`                            | Places coins in random positions, avoiding snake                       |
+| `PromptScreen`, `YouDied`, `ReinitializeGame` | UI/UX logic and game state resets                                      |
 
 ---
 
 ## Requirements
 
 - **MASM32** or compatible x86 Assembly compiler
-- **Irvine32 library** (`Irvine32.inc`, `Irvine32.lib`, `Irvine32.dll`)  
+- **Irvine32 library** (`Irvine32.inc`, `Irvine32.lib`, `Irvine32.dll`)
   - Download from the official Kip Irvine distribution (not included in this repo)
 - Windows machine (due to dependency on Irvine32)
 
@@ -109,9 +110,12 @@ link /subsystem:console snake.obj Irvine32.lib
 ## Disclaimer
 
 This repository contains **only**:
+
 - Source code (`snake.asm`)
 - Compiled object file (`snake.obj`)
 - Executable (`snake.exe`) for testing
 
 It **does not** include the Irvine32 library files, in compliance with licensing restrictions.  
 To rebuild from source, you must download Irvine32 externally.
+
+# Built with ❤️ and registers.
